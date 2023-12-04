@@ -1,0 +1,17 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block titulo %} VER RESERVA - {% endblock%}
+
+{% block extra_css %} 
+<link rel="stylesheet" href="{% static 'web/css/detalle.css' %}">
+{% endblock %}
+
+{% block nav %}  {% endblock %}  
+
+{% block main%}
+<h3>ESTE ES EL DETALLE DE LA RESERVA <b> {{object.titulo}}</b></h3>
+<P>{{object.descripcion}}</P>
+<p>{{object.fecha_inicio}}</p>
+<p>{{object.fecha_fin}}</p>
+{% endblock %}

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Reserva
 from django.views.generic.edit import CreateView
-
+from django.views.generic.detail import DetailView
 
 # Create your views here.
 
@@ -30,3 +30,6 @@ class reservascreateview (CreateView):
     success_url = 'reservas'
     fields ='__all__' 
 
+class reservasdetailview(DetailView):
+    model = Reserva
+    template_name = 'web/detalle.html'
