@@ -1,17 +1,25 @@
 {% extends "web/base.html" %}
+{% load static %}
 
 {% block titulo %}Parking Services github.io {% endblock%}
+{% block extra_css %} 
+<link rel="stylesheet" href="{% static 'web/css/base.css' %}">
+
+{% endblock %}
+{% block nav %} 
+
+{% endblock %}
 
 
-
-{% block main%}  <div id="intro">
+{% block main%}  
+    <div id="intro">
     <p>
         Parking Service tiene las mejores tarifas de estacionamiento en Capital Federal.
         Estacionamiento a largo plazo, estacionamiento a corto plazo y para varios días.
         Descubrí los diferentes tipos de cocheras que se adapten a tu necesidad.
     </p>
-</div>
-<section id="box1" class="box">
+    </div>
+    <section id="box1" class="box">
     <article class="article">
         <h3>CREA TU CUENTA:</h3>
         <p id="creacuenta">Crea una cuenta en <strong>Parking Services</strong> para acceder a todas
@@ -19,19 +27,24 @@
             permitirá gestionar tus reservas de manera más eficiente.
         </p>
         <p>¡Registrate ahora y comenza a disfrutar de la comodidad de Parking Services!</p>
-        <a href="pages/register.html"><img id="imgcuenta" src="src/images/CREA_TU_CUENTA-removebg-preview.png" alt=""S></a>
+        <a href="#">
+            <img src="{% static 'web/images/CREA_TU_CUENTA-removebg-preview.png' %}" alt="">
+        </a>
     </article>
-</section>
-<section id="box2" class="box">
+    </section>
+    <section id="box2" class="box">
     <article class="article">
         <h3>ESTADISTICAS Y REPORTES</h3>
         <p>Analiza el rendimiento de tu estacionamiento con gráficos claros.
             Genera informes detallados de ingresos y ocupación.
-            Toma decisiones informadas para optimizar tus operaciones.</p>
-        <img src="src/images/estadistica-removebg-preview.png" alt="" id="imgestadistica">
-    </article>
-</section>
-<section id="box3" class="box">
+            Toma decisiones informadas para optimizar tus operaciones.
+        </p>
+        <img src="{% static 'web/images/estadistica-removebg-preview.png' %}" alt="">
+
+
+        </article>
+    </section>
+    <section id="box3" class="box">
     <article class="article">
         <h3>GESTION DE RESERVAS</h3>
         <p>
@@ -39,10 +52,12 @@
             Accede al historial completo de reservas.
             Personaliza horarios y tarifas según tus necesidades.
         </p>
-        <img src="src/images/reserva-removebg-preview.png" alt="" id="imgreserva">
+        <a href="#">
+            <img src="{% static 'web/images/reserva-removebg-preview.png' %}" alt="" id="imgreserva">
+        </a>
     </article>
-</section>
-<section id="box4" class="box">
+    </section>
+    <section id="box4" class="box">
     <article class="article">
         <h3>RESUMEN DE TU ESTACIONAMIENTO</h3>
         <p>
@@ -50,10 +65,10 @@
             Reservas confirmadas y próximas.
             Información detallada sobre ingresos diarios y mensuales.
         </p>
-        <img src="src/images/resumen.png" alt="" id="imgresumen">
+        <img src="{% static 'web/images/resumen.png' %}" alt="" id="imgresumen">
     </article>
-</section>
-<section id="box5" class="box">
+    </section>
+    <section id="box5" class="box">
     <article class="article">
         <h3>CONFIGURACION DE CUENTA</h3>
         <p>
@@ -61,10 +76,10 @@
             Cambia contraseñas y ajusta tus preferencias.
             Administra la disponibilidad y tarifas de manera flexible.
         </p>
-        <img src="src/images/configuracion-removebg-preview.png" alt="" id="imgconfig">
+        <img src="{% static 'web/images/configuracion-removebg-preview.png' %}" alt="" id="imgconfig">
     </article>
-</section>
-<section id="box6" class="box">
+    </section>
+    <section id="box6" class="box">
     <article class="article">
         <h3>NUESTRA UBICACION..!!</h3>
         <p id="textomapa">Ubicado en una posicion estrategica de Bs As, nuesto espacio brinda acceso
@@ -75,7 +90,7 @@
             width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </article>
-</section>
+    </section>
 {% endblock %}
 
 

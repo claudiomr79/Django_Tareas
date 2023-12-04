@@ -10,35 +10,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="src/images/logo1- SIN FONDO.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/css/styles.css">
     <script src="https://kit.fontawesome.com/1cf8526b22.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'web/css/base.css' %}">
     {% block extra_css %} {% endblock %}
 </head>
 <body>
     <header>
-        <div class="header_logo">
-            <div>
-                <a href="index.html"><img src="src/images/parking.jpg" alt="" class="logo"></a>
-            </div>
+            <div class="header_logo">
+             <div>
+                <a href="{% url 'index' %}"><img src="{% static 'web/images/Parking.jpg' %}" alt="" class="logo"></a>
+             </div>
             <div>
                 <h1 class="maquina-escribir">Parking Services<span class="cursor">|</span></h1>
                 <h3>Su vehículo, nuestro activo más importante</h3>
-            </div>
-        </div> 
-         <nav>
-          <ul class="navList">
-            <li class="navItem"><a href="pages/contact.html">Contacto</a></li>
-            <li class="navItem"><a href="pages/reservas.html">Reservas</a></li>
-            <li class="navItem"><a href="pages/tarifas.html">Tarifas</a></li>
-            <li class="navItem"><a href="pages/login.html">Acceso</a></li>
-        </ul>
-        </nav>
+                </div>
+            </div> 
+        
 
     </header>
+    <nav>
+        <ul >
+            <li class="linav"><a href="{% url 'crear' %}">Crear Reserva</a></li>
+            <li class="linav"><a href="{% url 'reservas'%}"> Ver Reservas</a></li> 
+            <li class="linav"><a href="{% url 'index' %}">Eliminar Reserva</a></li>
+            <li class="linav"><a href="{% url 'index' %}">Acceso</a></li> 
+        </ul>
+        
+        </nav>
     <main>
-        {% block main%} {% endblock %}
+        {% block main %} {% endblock %}
     </main>
     <footer> 
         <div>

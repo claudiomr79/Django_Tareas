@@ -1,41 +1,32 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Reserva
+from django.views.generic.edit import CreateView
+
 
 # Create your views here.
+
+def Ver_Reservas (request):
+   mis_reservas = Reserva.objects.all()
+
+   context = {
+        'Lista_reservas':mis_reservas
+    }
+   return render (request,'web/reservas.html', context)
+
+
+
+
+
 def index(request):
     return render (request, 'web/index.html', context={})
 
 
 
 
-def Lista_de_Reservas(request):
-
-    listatareas= [
-        'RESERVA 1',
-        'RESERVA 2',
-        'RESERVA 3',
-        'RESERVA 4',
-        'RESERVA 5',
-       
-        ]
-    
-    context={
-        'tareas': listatareas,
-        'usuarioactivo': True,
-    }
-
-  
-    return render (request,'web/listadetareas.html', context)
-
-
-
-
-
-def Modificar(request):
-    return HttpResponse(" ESTA SERA LA PAGINA DE MODIFICACION")
-
-def Saludar(request, nombre):
-    return HttpResponse( f"BIENVENIDO {nombre}") 
-
-
+class reservascreateview (CreateView):
+    model = Reserva
+    template_name = 'web/crear.html'
+    success_url = 'reservas'
+    fields ='__all__' 
 
