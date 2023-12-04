@@ -10,10 +10,10 @@
 {% block nav %}  {% endblock %}  
 
 {% block main%}
-<h3>MODIFICACION DE UNA RESERVA <b> {{object.titulo}}</b></h3>
+<h3>MODIFICACION DE LA RESERVA DE: <p id="titulo"> {{object.titulo}}</p></h3>
 <form method="post">
     {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="update">
+   <p>{{form.as_p}}</p> 
+    <input type="submit" value="update" id="boton">
 </form>
-{% endblock %}
+{% endblock %} 

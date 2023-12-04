@@ -10,8 +10,10 @@
 {% block nav %}  {% endblock %}  
 
 {% block main%}
-<h3>ESTE ES EL DETALLE DE LA RESERVA <b> {{object.titulo}}</b></h3>
-<P>CATEGORIA DEL VEHICULO: {{object.descripcion}}</P>
-<p>FECHA DE INICIO DE LA RESERVA: {{object.fecha_inicio}}</p>
-<p>FECHA DE FINAL DE LA RESERVA: {{object.fecha_fin}}</p>
+<h3>ESTE ES EL DETALLE DE LA RESERVA <p id="titulo"> {{object.titulo}}</p></h3>
+<section>
+    <P>CATEGORIA DEL VEHICULO: </p><p class="objeto">{{object.descripcion}}</P>
+    <p>FECHA DE INICIO DE LA RESERVA: </p><p class="objeto">{{object.fecha_inicio}}</p>
+    <p>FECHA DE FINAL DE LA RESERVA: </p><p class="objeto">{{object.fecha_fin}}</p>
+</section>
 {% endblock %}
