@@ -98,12 +98,12 @@ main{
     display: flex;
     justify-content: center;
 }
-article{
+/* article{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 article > img {
     width: 10%;
     height: 10%;

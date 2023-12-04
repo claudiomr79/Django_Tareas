@@ -6,3 +6,6 @@ class Reserva(models.Model):
     descripcion = models.CharField (max_length=100, verbose_name='descripcion')
     fecha_inicio = models.DateField (verbose_name='Fecha de Inicio')
     fecha_fin = models.DateField (verbose_name='Fecha de Fin')
+
+    def __str__(self):
+        return f"{'usuario', self.titulo} -- {'categoria', self.descripcion}"

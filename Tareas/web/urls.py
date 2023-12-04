@@ -9,4 +9,7 @@ urlpatterns = [
     path('reservas', views.Ver_Reservas, name='reservas'),
     path('crear', views.reservascreateview.as_view(), name='crear'),
     path('detalle/<pk>', views.reservasdetailview.as_view(),name='detalle'),
+    path('modificar/<pk>', views.reservaupdateview.as_view(),name='modificar'),
+    path('borrar/<pk>', views.reservasdeleteview.as_view(),name='borrar'),
+
     ] 
