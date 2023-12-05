@@ -11,5 +11,6 @@ urlpatterns = [
     path('detalle/<pk>', views.reservasdetailview.as_view(),name='detalle'),
     path('modificar/<pk>', views.reservaupdateview.as_view(),name='modificar'),
     path('borrar/<pk>', views.reservasdeleteview.as_view(),name='borrar'),
+    path('about', views.about, name='about'),
 
     ] 

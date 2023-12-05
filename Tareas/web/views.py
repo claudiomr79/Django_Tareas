@@ -46,6 +46,10 @@ class reservaupdateview(UpdateView):
 class reservasdeleteview(DeleteView):
      model= Reserva
      template_name = 'web/borrar.html'
-     success_url= reverse_lazy('reservas')
+     success_url= reverse_lazy('reservas') 
+
+
+def about(request):
+    return render (request, 'web/about.html', context={})
 
 
